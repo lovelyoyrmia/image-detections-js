@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Models from "./Models";
+import imageBaby from "../image/image.jpg";
 import "./Body.css";
 
 function Body() {
@@ -29,11 +30,7 @@ function Body() {
       ) : (
         <div className="post_card">
           <div className="add_post">
-            <img
-              src="https://images.pexels.com/photos/9811710/pexels-photo-9811710.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="someom"
-              className="avatar"
-            />
+            <img src={imageBaby} alt="avatar" className="avatar" />
             <div className="post_form">
               <input
                 type="text"
