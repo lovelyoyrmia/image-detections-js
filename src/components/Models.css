@@ -1,0 +1,41 @@
+.container-img {
+  height: calc(100vh - 50px);
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.left-side > img {
+  width: 35rem;
+  height: 35rem;
+  object-fit: contain;
+}
+
+.left-side > canvas {
+  height: 35rem;
+}
+
+.friend-input {
+  position: absolute;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.friends {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
