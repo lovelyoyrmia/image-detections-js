@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2rem;
+  border-top: 1px solid gray;
+}
+
+.footer-icon {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.image-icon {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.footer-email {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-no {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 720px), (orientation: potrait) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-icon {
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+
+  .footer-no {
+    justify-content: center;
+  }
+}
