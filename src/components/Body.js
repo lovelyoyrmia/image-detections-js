@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Models from "./Models";
 import imageBaby from "../image/image.jpg";
 import "./Body.css";
+import DropFile from "./DropFile";
 
 function Body() {
   const [file, setFile] = useState();
@@ -23,12 +24,15 @@ function Body() {
     file && getImage();
   }, [file]);
 
+  console.log(file);
+
   return (
     <div className="body">
       {image ? (
         <Models image={image} />
       ) : (
         <div className="post_card">
+          <DropFile />
           <div className="add_post">
             <img src={imageBaby} alt="avatar" className="avatar" />
             <div className="post_form">
