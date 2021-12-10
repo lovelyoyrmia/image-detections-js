@@ -1,0 +1,34 @@
+.dropfile-con {
+  border: 5px dashed grey;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.drophighlight {
+  border: 5px dashed blue;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.drop-subtitle {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.drop-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.drop-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
