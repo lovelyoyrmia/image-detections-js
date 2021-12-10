@@ -54,8 +54,6 @@ function Models({ image }) {
     setFriends((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  console.log(friends);
-
   return (
     <div className="container-img">
       <div className="left">
@@ -71,8 +69,8 @@ function Models({ image }) {
             <input
               name={`input${i}`}
               style={{
-                left: face[0] - face[2] + face[3] - 40,
-                top: face[1] + 15,
+                left: face[0] - face[2] + face[3] - 50,
+                top: face[1] - face[2] + face[3] + 15,
               }}
               placeholder="Who's this ?"
               key={i}
