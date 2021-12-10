@@ -1,37 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import "./DropFile.css";
 
-function DropFile() {
-  const [highlight, setHighlight] = useState(false);
-
-  const handleHighlight = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setHighlight(true);
-  };
-  const handleUnhighlight = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setHighlight(false);
-  };
-  const handleDrop = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    let data = e.dataTransfer;
-    let file = data.files;
-    console.log(file);
-  };
-
+function DropFile({
+  highlight,
+  handleHighlight,
+  handleUnhighlight,
+  handleDrop,
+}) {
   return (
-    <div>
-      <div
-        onDragEnter={handleHighlight}
-        onDragOver={handleHighlight}
-        onDragLeave={handleUnhighlight}
-        onDrop={handleDrop}
-      >
-        <p>Drop File Here</p>
+    <div
+      className={highlight ? "drophighlight" : "dropfile-con"}
+      onDragEnter={handleHighlight}
+      onDragOver={handleHighlight}
+      onDragLeave={handleUnhighlight}
+      onDrop={handleDrop}
+    >
+      <p className="drop-title">Drop File Here</p>
+      <div className="drop-icon">
+        <img
+          src="https://image.flaticon.com/icons/png/128/959/959143.png"
+          alt="dropfile"
+          style={{ width: "4rem" }}
+        />
       </div>
+      <p className="drop-subtitle">
+        Or <span>Browse the image bellow</span>
+      </p>
     </div>
   );
 }
